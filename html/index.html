@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- button -->
+
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-light m-3  w-10" onclick="signup()">Sign Up</button>
+        <button class="btn btn-light m-3 w-10 " onclick="signin()">Sign in</button>
+
+    </div><br>
+    </main>
+    <p id="show"></p>
+
+
+
+    <main class="d-flex justify-content-center">
+        <!--sign up -->
+
+        <div id="Signupf">
+
+            <form class="m-5">
+                <h1>Sign in to Create an Account</h1><br>
+                <input type="email" class="w-40 form-control" id="email2" placeholder="email">
+                <br>
+                <button type="button" class="btn btn-primary w-40 form-control" onclick="layi()">Sign Up</button>
+            </form>
+        </div>
+
+
+
+        <!-- Log in -->
+
+
+        <div id="diva">
+            <form class="m-5">
+                <h1>Log in into your account</h1><br>
+                <input type="email" class="w-40 form-control" id="email1" placeholder="email">
+                <br>
+                <button type="button" class="btn btn-primary w-40 form-control" onclick="oye()">Log in</button>
+            </form>
+        </div>
+    </main>
+
+
+
+    <!-- dash board -->
+
+    <div style="margin: auto; display: flex; justify-content: space-around;" id="wen">
+        <h1>Welcome Azeez Tunji</h1>
+        <button class="btn btn-info" onclick="timi()">log out</button>
+    </div>
+    </main>
+</body>
+
+</html>
+<script>
+
+
+    function signup() {
+        document.getElementById("Signupf").style.display = "block"
+        document.getElementById("diva").style.display = "none"
+        document.getElementById("wen").style.display = "none"
+    }
+
+    signup()
+
+    function signin() {
+
+        document.getElementById("Signupf").style.display = "none"
+        document.getElementById("diva").style.display = "block"
+        document.getElementById("wen").style.display = "none"
+    }
+
+
+
+    data = ["femigoals59@gmail.com", "tunji@", "mubarak"]
+    function layi() {
+        let email = document.getElementById("email2").value
+
+        if (email.includes('@')) {
+            document.getElementById("diva").style.display = "block"
+            document.getElementById("Signupf").style.display = "none"
+        } else {
+            document.getElementById("show").innerHTML = "incorrect email"
+        }
+    }
+
+
+    function oye() {
+
+        let email = document.getElementById("email1").value
+
+        if (email.includes('@')) {
+            document.getElementById("wen").style.display = "block"
+            document.getElementById("diva").style.display = "none"
+        }
+    }
+    function timi() {
+        document.getElementById("wen").style.display = "none"
+        document.getElementById("diva").style.display = "block"
+    }
+</script>
